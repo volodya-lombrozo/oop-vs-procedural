@@ -27,7 +27,7 @@ BibTeX entry:
 }
 ```
 
-## About the Structure of the Repository
+## Structure of the Repository
 
 This mono-repository contains the following modules:
 
@@ -36,3 +36,7 @@ This mono-repository contains the following modules:
   profiling each program. This includes the program startup procedures, the
   initialization of the profiler, result exports, and testing scripts such as
   those for Apache JMeter projects.
+- [oop-statistics-filter](oop-statistics-filter/README.md) - the module that
+  holds the code that aggregates the profiling results received in the
+  [cost-of-oop](cost-of-oop/README.md) module. This module creates final CSV
+  files that might be used for further analysis.

@@ -80,6 +80,36 @@ CSV file [here](libraries-new.csv). The columns of the CSV file are:
 The raw profiling results by methods you can
 get [here](https://github.com/volodya-lombrozo/cost-of-oop/tree/main/results)
 
+## Files of the repository
+
+- [src](src) - the source code of the module, which contains plain Java code
+  that aggregates the profiling results obtained during the profiling of various
+  applications.
+
+- [libraries.csv](libraries.csv) - the initial data from the profiling results.
+  This data is retained for historical purposes only. **DO NOT USE THEM FOR
+  ANALYSIS**.
+
+- [libraries-new.csv](libraries-new.csv) - the final aggregated data of the
+  profiling results by libraries. The columns of the CSV file are described
+  [above](#statistics-of-application-methods-profiling).
+  Other files with similar names, such
+  as [libraries-news.for.paper.numbers](libraries-news.for.paper.numbers),
+  [libraries-new.numbers](libraries-new.numbers), [libraries-new-chart.jpg](libraries-new-chart.jpg),
+  [statistics.data.histogram.jpg](statistics.data.histogram.jpg) are just
+  different visual representations of the same data.
+
+- [verification.csv](verification.csv) is file contains the technical
+  verification data produced to check the correctness of the aggregation and
+  profiling processes. Specifically, profiling was applied to handwritten
+  classes for which we know
+  the [exact number of methods and their types](../cost-of-oop/src/main/java/verification).
+
+- [correlation.csv](correlation.csv) - this file shows the correlation between
+  the number of methods and GitHub repository statistics such as the number of
+  stars, forks, issues, size, and age of the application repository on GitHub.
+  This could be interesting for future research.
+
 ## Ancestor
 
 This submodule was originally a standalone repository is still
