@@ -1,4 +1,4 @@
-# How to run jdepend:
+# How to run cccc:
 
 ```shell
 docker run -v "$(pwd):/workdir" cccc-app 
