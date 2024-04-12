@@ -1,4 +1,10 @@
-# Methods profiling results
+# Method profiling results
+
+Profiling results of 28 Java frameworks used in 10 applications. This module
+contains all scripts used for profiling each application. This includes the
+program startup procedures, the initialization of the profiler, result exports,
+and testing scripts such as those for [Apache JMeter](https://jmeter.apache.org)
+application.
 
 This repository contains the profiling results of the following applications:
 
@@ -54,5 +60,5 @@ All other applications have the same structure.
 
 ## Ancestor
 
-This submodule was originally a standalone repository. The original repository
-is available [here](https://github.com/volodya-lombrozo/cost-of-oop).
+This submodule was originally a standalone repository is still
+available [here](https://github.com/volodya-lombrozo/cost-of-oop).

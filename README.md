@@ -31,4 +31,8 @@ BibTeX entry:
 
 This mono-repository contains the following modules:
 
-- todo
+- [cost-of-oop](cost-of-oop/README.md) - the main module with the profiling
+  results of 28 Java frameworks. This module contains all scripts used for
+  profiling each program. This includes the program startup procedures, the
+  initialization of the profiler, result exports, and testing scripts such as
+  those for Apache JMeter projects.
