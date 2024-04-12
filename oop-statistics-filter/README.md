@@ -2,7 +2,7 @@
 
 This repository contains the code that aggregates the profiling results received
 during the profiling of different applications (see
-[cost-of-oop](https://github.com/volodya-lombrozo/cost-of-oop) for profiling
+[cost-of-oop](../cost-of-oop/README.md) for profiling
 scripts and applications). The final results of method usage is presented in the
 following histogram:
 
@@ -80,4 +80,7 @@ CSV file [here](libraries-new.csv). The columns of the CSV file are:
 The raw profiling results by methods you can
 get [here](https://github.com/volodya-lombrozo/cost-of-oop/tree/main/results)
 
+## Ancestor
 
+This submodule was originally a standalone repository is still
+available [here](https://github.com/volodya-lombrozo/oop-statistics-filter).
