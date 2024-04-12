@@ -24,4 +24,15 @@ hs_err_pid*
 replay_pid*
 
 
+#Common
 .idea/
+*.iml
+.DS_Store
+*.DS_Store
+
+#Results folder
+cost-of-oop/oop
+cost-of-oop/target
+cost-of-oop/.DS_Store
+cost-of-oop/jmeter
+cost-of-oop/src/main/profiling/derby/jmeter
