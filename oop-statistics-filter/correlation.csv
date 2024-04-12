@@ -1,0 +1,11 @@
+N/A,GitHub Age (ms),GitHub Forks,GitHub Open Issues,GitHub Size (KB),GitHub Stars
+Constructors,1.0,1.0,-0.06,0.28,0.81
+Instance Package-Private Methods,0.94,0.95,0.1,0.4,0.87
+Instance Private Methods,0.58,0.57,0.06,0.15,0.47
+Instance Public Methods,0.66,0.64,-0.18,0.08,0.52
+Instance Public Overridden Methods,-0.41,-0.43,0.39,0.15,-0.21
+Not Found Methods,-0.05,-0.07,0.59,0.56,0.41
+Static Package-Private Methods,-0.17,-0.19,0.39,0.22,0.09
+Static Private Methods,-0.12,-0.13,0.45,0.3,0.12
+Static Public Methods,-0.14,-0.14,0.41,0.25,0.05
+Total,0.14,0.15,0.21,0.3,0.22
