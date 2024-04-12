@@ -58,6 +58,12 @@ All other applications have the same structure.
 3. Download and install the application you want to profile.
 4. Change paths in the scripts according to your environment.
 
+## Results
+
+// todo exclusions like h2
+
+// aggregated results in [results](results/.)
+
 ## Ancestor
 
 This submodule was originally a standalone repository is still
