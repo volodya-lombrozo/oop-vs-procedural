@@ -18,10 +18,17 @@ BibTeX entry:
 
 ```bibtex
 @article{zakharov-bugayenko-oop-vs-procedural-2024,
-  title={Object-Oriented vs. Procedural: A Profiling Insight into Java Method Usage Patterns},
-  author={Vladimir Zakharov and Yegor Bugayenko},
-  journal={todo: Journal Name},
-  year={2024},
-  publisher={todo: Publisher},
-  doi={todo: DOI if available},
+    title = {Object-Oriented vs. Procedural: A Profiling Insight into Java Method Usage Patterns},
+    author = {Vladimir Zakharov and Yegor Bugayenko},
+    journal = {todo: Journal Name},
+    year = {2024},
+    publisher = {todo: Publisher},
+    doi = {todo: DOI if available},
 }
+```
+
+## About the Structure of the Repository
+
+This mono-repository contains the following modules:
+
+- todo
