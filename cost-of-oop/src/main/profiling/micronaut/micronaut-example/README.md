@@ -27,4 +27,7 @@ You can run the application in development mode with the next command:
 
 - [Micronaut HTTP Client documentation](https://docs.micronaut.io/latest/guide/index.html#httpClient)
 
+## Ancestor
 
+This submodule was
+originally [a standalone repository](https://github.com/volodya-lombrozo/micronaut-example).
