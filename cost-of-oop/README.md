@@ -1,12 +1,12 @@
 # Method profiling results
 
-Profiling results of 28 Java frameworks used in 10 applications. This module
-contains all scripts used for profiling each application. This includes the
-program startup procedures, the initialization of the profiler, result exports,
-and testing scripts such as those for [Apache JMeter](https://jmeter.apache.org)
-application.
+Profiling results for 28 Java frameworks used across 10 applications. This
+module includes all scripts utilized for profiling each application,
+encompassing program startup procedures, profiler initialization, result
+exports, and testing scripts, such as those used for
+the [Apache JMeter](https://jmeter.apache.org) application.
 
-This repository contains the profiling results of the following applications:
+This repository contains the profiling results for the following applications:
 
 - [derby](src/main/profiling/derby/method-list-cpu.csv)
 - [dropwizard](src/main/profiling/dropwizard/method-list-cpu.csv)
@@ -19,11 +19,11 @@ This repository contains the profiling results of the following applications:
 - [tomcat](src/main/profiling/tomcat/method-list-cpu.csv)
 - [vertx](src/main/profiling/vertx/method-list-cpu.csv)
 
-Each CSV file contains a list of methods with the number of invocations and CPU
-time spent in the methods.
+Each CSV file contains a list of methods along with the number of invocations
+and the CPU time spent in each method.
 
-All of that applications were profiled during one minute with a constant load
-of 20-50 requests per second. In general, a profiling pipeline is following:
+All of these applications were profiled over one minute under a constant load of
+20-50 requests per second. Generally, the profiling pipeline is as follows:
 
 - Start the application with
   profiler [bytecode instrumentation](https://www.yourkit.com/docs/java-profiler/2023.5/help/agent.jsp)
@@ -37,17 +37,53 @@ of 20-50 requests per second. In general, a profiling pipeline is following:
 - Stop the application
 - Save the profiling results
 
-You can find all profiling scripts under `main/profiling` folder for each
-application.
-For example, Micronaut profiling script is located
-under `main/profiling/micronaut` folder:
+You can find all the profiling scripts in
+the [profiling](src/main/profiling) folder for each
+application. For example, the Micronaut profiling script is located in the
+[main/profiling/micronaut](src/main/profiling/micronaut) folder:
 
-- `micronaut-profilinf.sh` - script for starting the entire profiling pipeline.
-- `Micronaut.jmx` - JMeter test case for Micronaut application.
-- `method-list-cpu.csv` - list of methods with the number of invocations and CPU
-  time spent in the methods.
+[micronaut-profiling.sh](src%2Fmain%2Fprofiling%2Fmicronaut%2Fmicronaut-profiling.sh) -
+script for starting the entire profiling pipeline.
+[Micronaut.jmx](src%2Fmain%2Fprofiling%2Fmicronaut%2FMicronaut.jmx) - JMeter
+test case for the Micronaut application.
+[method-list-cpu.csv](src%2Fmain%2Fprofiling%2Fmicronaut%2Fmethod-list-cpu.csv) -
+profiling results. List of methods with the number of invocations and the CPU
+time spent in each method.
 
-All other applications have the same structure.
+All other applications follow the same structure. Each startup script includes
+comments on how to run the application:
+
+- [derby.sh](src/main/profiling/derby/derby-profiling.sh) - run the derby
+  profiling pipeline.
+- [dopwizard.sh](src/main/profiling/dropwizard/dropwizard-profiling.sh) - run
+  the dropwizard profiling pipeline.
+- [h2.sh](src/main/profiling/h2/h2-profiling.sh) - run the h2 profiling
+  pipeline.
+- [kafka.sh](src/main/profiling/kafka/kafka-profiling.sh) - run the kafka
+  profiling pipeline.
+- [micronaut.sh](src/main/profiling/micronaut/micronaut-profiling.sh) - run the
+  micronaut profiling pipeline.
+- [spring-profiling.sh](src/main/profiling/spring-mvc/spring-profiling.sh) - run
+  the spring-mvc profiling pipeline.
+- [struts.sh](src/main/profiling/struts/struts-profiling.sh) - run the struts2
+  profiling pipeline.
+- [takes.sh](src/main/profiling/takes/takes-profiling.sh) - run the takes
+  profiling pipeline.
+- [tomcat.sh](src/main/profiling/tomcat/tomcat-profiling.sh) - run the tomcat
+  profiling pipeline.
+- [vertx.sh](src/main/profiling/vertx/vertx-profiling.sh) - run the vertx
+  profiling pipeline.
+
+We also have three additional scripts to check our verification process:
+
+- [verification-static.sh](src/main/profiling/verification-static/verification-static-profiling.sh) -
+  run a profiling pipeline of an application that contains only static methods.
+- [verification-instance.sh](src/main/profiling/verification-instance/verification-instance-profiling.sh) -
+  run a profiling pipeline of an application that contains only instance method
+  invocations.
+- [verification-half.sh](src/main/profiling/verification-half/verification-half-profiling.sh) -
+  run a profiling pipeline of an application that contains 50% static and 50%
+  instance method invocations.
 
 **Note:** before starting the profiling pipeline you need:
 
