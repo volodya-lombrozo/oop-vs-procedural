@@ -21,7 +21,6 @@ echo "Java application pid=$APP_PID"
 # Wait until startup
 sleep 10
 # Add load through JMeter
-# In my case JMeter path /Users/lombrozo/Workspace/Tools/apache-jmeter-5.5/bin
 # The full documentation about JMeter cli you can find right here:
 # https://jmeter.apache.org/usermanual/get-started.html#non_gui
 if [[ -z "${JMETER_PLAN}" ]];
