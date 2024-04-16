@@ -96,11 +96,60 @@ We also have three additional scripts to check our verification process:
 
 ## Results
 
-// todo exclusions like h2
+Raw results of the profiling are stored next to the scripts in the
+[profiling](src/main/profiling) folder:
 
-// aggregated results in [results](results/.)
+- [derby/method-list-cpu.csv](src/main/profiling/derby/method-list-cpu.csv)
+- [dropwizard/method-list-cpu.csv](src/main/profiling/dropwizard/method-list-cpu.csv)
+- [h2/method-list-cpu.csv](src/main/profiling/h2/method-list-cpu.csv)
+- [kafka/method-list-cpu.csv](src/main/profiling/kafka/method-list-cpu.csv)
+- [micronaut/method-list-cpu.csv](src/main/profiling/micronaut/method-list-cpu.csv)
+- [spring-mvc/method-list-cpu.csv](src/main/profiling/spring-mvc/method-list-cpu.csv)
+- [struts/method-list-cpu.csv](src/main/profiling/struts/method-list-cpu.csv)
+- [takes/method-list-cpu.csv](src/main/profiling/takes/method-list-cpu.csv)
+- [tomcat/method-list-cpu.csv](src/main/profiling/tomcat/method-list-cpu.csv)
+- [vertx/method-list-cpu.csv](src/main/profiling/vertx/method-list-cpu.csv)
+
+And for verification applications:
+
+- [verification-static/method-list-cpu.csv](src/main/profiling/verification-static/method-list-cpu.csv)
+- [verification-instance/method-list-cpu.csv](src/main/profiling/verification-instance/method-list-cpu.csv)
+- [verification-half/method-list-cpu.csv](src/main/profiling/verification-half/method-list-cpu.csv)
+
+Each CSV file contains a list of methods with the number of invocations and
+time spent in the methods:
+
+- "Method"—method name
+- "Time (ms)"—total time spent in the method
+- "Avg. Time (ms)"—average time spent in the method
+- "Own Time (ms)"—time spent in the method excluding calls to inner methods
+- "Count"—number of invocations
+
+### Notes
+
+- **Not reliable results for h2.
+  Results received for **h2** are not reliable
+  due to the low number of invocations identified.
+  Most likely, the profiler was not able to capture all the invocations.
+  We recommend using a different profiler for this application or try to solve
+  the issue with the current profiler.
+
+- **Old Data**.
+  The [results](results/.) folder contains **outdated** profiling
+  results.
+  This folder is kept for historical purposes and should not be used
+  for analysis.
+  The most recent results are stored in
+  the [profiling](src/main/profiling) folder.
+
+- **Aggregated Results**.
+  The purpose of this submodule is to collect all possible data from profiling
+  different applications.
+  In a way, it merely collects raw data.
+  All further aggregations are performed in
+  the [oop-statistics-filter](../oop-statistics-filter/README.md) submodule.
 
 ## Ancestor
 
-This submodule was originally a standalone repository is still
-available [here](https://github.com/volodya-lombrozo/cost-of-oop).
+This submodule was
+originally [a standalone repository](https://github.com/volodya-lombrozo/cost-of-oop).
