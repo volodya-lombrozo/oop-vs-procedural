@@ -1,11 +1,31 @@
+## This script is used to profile a Java application with JMeter and YourKit Java Profiler
+## All the applications are started with the YourKit Java Profiler agent.
+## Before running all scripts in this folder, you need to prepare this script as follows:
+## 1. Set the path to the JMeter bin directory in the JMETER_PATH variable in this script.
+## 2. Set the path to the YourKit Java Profiler directory in the PROFILER variable in this script.
 set -x
 set -e
 #Init all required variables
+
+# JMETER_PATH=${JMETER_PATH:="./apache-jmeter-5.5/bin"}
+if [ -z "${JMETER_PATH}" ]; then
+  echo "Error: JMETER_PATH is not set."
+  exit 1
+fi
+# PROFILER=${PROFILER:="/Applications/YourKit-Java-Profiler-2022.9.app/Contents/Resources"}
+if [ -z "${PROFILER}" ]; then
+  echo "Error: PROFILER is not set."
+  exit 1
+fi
+
+#APPLICATION_JAR=${APPLICATION_JAR:="./db-derby-10.16.1.1-bin/lib/derbyrun.jar server start"}
+if [ -z "${APPLICATION_JAR}" ]; then
+  echo "Error: APPLICATION_JAR is not set."
+  exit 1
+fi
+
+PROFILER_SNAPSHOTS=${PROFILER_SNAPSHOTS:="$HOME/Snapshots"}
 JMETER_PLAN=${JMETER_PLAN:="Apache Derby.jmx"}
-JMETER_PATH=${JMETER_PATH:="/Users/lombrozo/Workspace/Tools/apache-jmeter-5.5/bin"}
-PROFILER=${PROFILER:="/Applications/YourKit-Java-Profiler-2022.9.app/Contents/Resources"}
-APPLICATION_JAR=${APPLICATION_JAR:="/Users/lombrozo/Workspace/Tools/db-derby-10.16.1.1-bin/lib/derbyrun.jar server start"}
-PROFILER_SNAPSHOTS=${PROFILER_SNAPSHOTS:="/Users/lombrozo/Snapshots"}
 PROFILER_API="$PROFILER/lib/yjp-controller-api-redist.jar"
 PROFILER_AGENT="$PROFILER/bin/mac/libyjpagent.dylib"
 PROFILER_CONVERTER="$PROFILER/lib/yourkit.jar"
