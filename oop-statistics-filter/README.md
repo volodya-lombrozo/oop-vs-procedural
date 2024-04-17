@@ -123,6 +123,10 @@ find [here](../cost-of-oop/src/main/profiling).
   [libraries-new.numbers](libraries-new.numbers), [libraries-new-chart.jpg](libraries-new-chart.jpg),
   [statistics.data.histogram.jpg](statistics.data.histogram.jpg) are just
   different visual representations of the same data.
+- [libraries-new-with-applications.csv](libraries-new-with-applications.csv) -
+  the same data as in [libraries-new.csv](libraries-new.csv) but with the
+  additional column "Application" that shows the name of the application that
+  was profiled.
 
 - [verification.csv](verification.csv) is file contains the technical
   verification data produced to check the correctness of the aggregation and
