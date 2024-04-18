@@ -11,22 +11,6 @@ percentage of instance methods and constructors compared to static methods. That
 signifies a developer’s preference for the object-oriented approach much more
 frequently than the procedural approach, despite its associated drawbacks.
 
-## Citation
-
-If you use this software in your research, please cite it using the following
-BibTeX entry:
-
-```bibtex
-@article{zakharov-bugayenko-oop-vs-procedural-2024,
-    title = {Object-Oriented vs. Procedural: A Profiling Insight into Java Method Usage Patterns},
-    author = {Vladimir Zakharov and Yegor Bugayenko},
-    journal = {todo: Journal Name},
-    year = {2024},
-    publisher = {todo: Publisher},
-    doi = {todo: DOI if available},
-}
-```
-
 ## Structure of the Repository
 
 This mono-repository contains the following modules:
@@ -40,3 +24,8 @@ This mono-repository contains the following modules:
   holds the code that aggregates the profiling results received in the
   [cost-of-oop](cost-of-oop/README.md) module. This module creates final CSV
   files that might be used for further analysis.
+
+## Citation
+
+If you use this software in your research, please cite it using the following
+[entry](CITATION.cff).
