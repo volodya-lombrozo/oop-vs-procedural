@@ -1,0 +1,17 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+url: "https://github.com/volodya-lombrozo/oop-vs-procedural"
+references:
+  - type: article
+    authors:
+      - family-names: Zakharov
+        given-names: Vladimir
+        orcid: "https://orcid.org/0009-0007-2420-5675"
+      - family-names: Bugayenko
+        given-names: Yegor
+        orcid: "https://orcid.org/0000-0001-6370-0678"
+    title: "Object-Oriented vs. Procedural: A Profiling Insight into Java Method Usage Patterns"
+    journal: "todo: Journal Name"
+    year: 2024
+    publisher: "todo: Publisher"
+    doi: "todo: DOI if available"
