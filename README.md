@@ -1,5 +1,7 @@
 # Object-Oriented vs. Procedural: A Profiling Insight into Java Method Usage Patterns
 
+[![DOI](https://zenodo.org/badge/785611469.svg)](https://zenodo.org/doi/10.5281/zenodo.11060929)
+
 In contemporary software development, the extent to which Java applications
 utilize object-oriented programming paradigms remains a subject of interest.
 Given that some studies highlight the significant overhead of OOP, it is crucial
